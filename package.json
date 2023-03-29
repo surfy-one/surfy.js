@@ -1,0 +1,30 @@
+{
+	"name": "surfy",
+	"version": "1.0.0",
+	"description": "Libraries for working with Surfy° Ecosystem in a JavaScript environment.",
+	"main": "./src/surfy.js",
+	"module": "./src/surfy.mjs",
+	"exports": {
+		"import": "./src/surfy.mjs",
+		"require": "./src/surfy.js"
+	},
+	"scripts": {
+		"test": "node test/test.mjs; node test/test.js;"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/surfy-one/core.js.git"
+	},
+	"author": {
+		"name": "Alexander Yermolenko",
+		"url": "https://surfy.one"
+	},
+	"keywords": [
+		"surfy"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/surfy-one/core.js/issues"
+	},
+	"homepage": "https://github.com/surfy-one/core.js#readme"
+}
