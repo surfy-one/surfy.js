@@ -9,7 +9,7 @@
 		"require": "./src/surfy.js"
 	},
 	"scripts": {
-		"test": "node test/test.mjs; node test/test.js;"
+		"test": "node tests/test.mjs; node tests/test.js;"
 	},
 	"repository": {
 		"type": "git",
