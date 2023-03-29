@@ -26,5 +26,8 @@
 	"bugs": {
 		"url": "https://github.com/surfy-one/core.js/issues"
 	},
-	"homepage": "https://github.com/surfy-one/core.js#readme"
+	"homepage": "https://github.com/surfy-one/core.js#readme",
+	"dependencies": {
+		"@surfy/request": "^1.0.9"
+	}
 }
