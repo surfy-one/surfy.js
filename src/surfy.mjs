@@ -3,6 +3,7 @@
 Surfy°
 
 */
+import Words from './words.mjs';
 
 class Surfy {
 
@@ -15,6 +16,7 @@ class Surfy {
 
 	constructor(conf={}){
 		this.conf = conf;
+		this.words = new Words(conf);
 	}
 };
 
