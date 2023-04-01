@@ -15,6 +15,11 @@ class Surfy {
 	*/
 
 	constructor(conf={}){
+		
+		if(!conf.endpoint){
+			conf.endpoint = 'https://api.surfy.one';
+		}
+
 		this.conf = conf;
 		this.words = new Words(conf);
 	}
