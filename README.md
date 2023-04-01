@@ -8,7 +8,49 @@ This repository contains all libraries for working with Surfy° Ecosystem in a J
 npm install surfy
 ```
 
-## Libraries
+## Initialisation
+
+```js
+
+import Surfy from 'surfy';
+
+const conf = {
+	email: "email@example.com",
+	key: "YOUR_FREE_API_KEY" // Get a key > https://surfy.one/developers
+};
+
+const surfy = new Surfy(conf);
+
+````
+
+## Words.translations
+
+```js
+
+const options = {
+	source: {
+		'lang': 'en',
+		'text': 'Hello Surfy!'
+	},
+	target: {
+		'lang': 'fr'
+	}
+};
+
+let result = await surfy.words.translate(options);
+console.log(result);
+
+/*
+
+{
+	status: true,
+	source: { lang: 'en', text: 'Hello Surfy!' },
+	target: { lang: 'fr', text: 'Bonjour Surfy!' }
+}
+
+*/
+
+````
 
 <br />
 <br />
