@@ -4,6 +4,8 @@ Words
 
 */
 
+import request from '@surfy/request';
+
 class Words {
 	
 	/*
@@ -15,6 +17,18 @@ class Words {
 
 	constructor(conf={}){
 		this.conf = conf;
+	}
+
+	async translate(params){
+
+		let result = await request({
+			url: `${this.conf.endpoint}/words/translate`,
+			method: 'POST',
+			headers: this.headers,
+			params: params
+		});
+
+		return result;
 	}
 };
 
