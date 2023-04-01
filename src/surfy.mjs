@@ -21,6 +21,12 @@ class Surfy {
 		}
 
 		this.conf = conf;
+		
+		this.conf.headers = {
+			email: this.conf.email,
+			key: this.conf.key
+		};
+
 		this.words = new Words(conf);
 	}
 };
