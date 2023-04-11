@@ -76,5 +76,5 @@ options = {
 	lng: -0.023309
 };
 
-result = await surfy.geo.timezone(options);
+result = await surfy.geo.tz(options);
 console.log('Geo° Timezone:', result);
