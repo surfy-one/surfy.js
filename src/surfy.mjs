@@ -5,6 +5,7 @@ Surfy°
 */
 
 import Words from './words.mjs';
+import Geo from './geo.mjs';
 
 class Surfy {
 
@@ -29,6 +30,7 @@ class Surfy {
 		};
 
 		this.words = new Words(conf);
+		this.geo = new Geo(conf);
 	}
 };
 

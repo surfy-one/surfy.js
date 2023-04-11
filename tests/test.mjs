@@ -40,4 +40,13 @@ Language Pairs
 */
 
 result = await surfy.words.translate.languages();
-console.log('Languages:', result)
+console.log('Languages:', result);
+
+/*
+
+Geo IP
+
+*/
+
+result = await surfy.geo.ip('8.8.8.8');
+console.log('Geo IP:', result);

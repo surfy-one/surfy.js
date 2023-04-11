@@ -25,6 +25,7 @@ class Words {
 		*/
 		
 		this.translate.languages = async () => {
+			
 			let result = await request({
 				url: `${this.conf.endpoint}/words/translate/languages`,
 				method: 'POST',
