@@ -16,7 +16,7 @@ let options, result;
 
 /*
 
-Check Translate
+Words° Translations
 
 */
 
@@ -35,7 +35,7 @@ console.log('Translate:', result);
 
 /*
 
-Language Pairs
+Words° Language Pairs
 
 */
 
@@ -44,9 +44,23 @@ console.log('Languages:', result);
 
 /*
 
-Geo IP
+Geo° IP
 
 */
 
 result = await surfy.geo.ip('8.8.8.8');
 console.log('Geo IP:', result);
+
+/*
+
+Geo° Reverse Geocoding
+
+*/
+
+options = {
+	lat: 51.505563,
+	lng: -0.023309
+};
+
+result = await surfy.geo.reverse(options);
+console.log('Geo° Reverse Geocoding:', result);
