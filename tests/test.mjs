@@ -31,4 +31,13 @@ options = {
 };
 
 result = await surfy.words.translate(options);
-console.log(result);
+console.log('Translate:', result);
+
+/*
+
+Language Pairs
+
+*/
+
+result = await surfy.words.translate.languages();
+console.log('Languages:', result)

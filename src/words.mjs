@@ -17,6 +17,22 @@ class Words {
 
 	constructor(conf = {}){
 		this.conf = conf;
+
+		/*
+
+		Get Languages
+
+		*/
+		
+		this.translate.languages = async () => {
+			let result = await request({
+				url: `${this.conf.endpoint}/words/translate/languages`,
+				method: 'POST',
+				headers: this.conf.headers
+			});
+
+			return result;
+		}
 	}
 
 	async translate(params){
