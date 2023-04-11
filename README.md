@@ -21,9 +21,9 @@ const conf = {
 
 const surfy = new Surfy(conf);
 
-````
+```
 
-## Words.translations
+## Words.translations()
 
 ```js
 
@@ -50,7 +50,27 @@ console.log(result);
 
 */
 
-````
+```
+
+## Words.translations.languages()
+
+```js
+
+let result = await surfy.words.translate.languages();
+console.log(result);
+
+/*
+
+{
+	status: true,
+	items: ['en-fr', 'en-it', 'en-ru', 'en-es',
+    'en-uk', 'fr-en', 'fr-it', 'fr-ru',
+    'fr-es', 'fr-uk', ...]
+}
+
+*/
+
+```
 
 <br />
 <br />
