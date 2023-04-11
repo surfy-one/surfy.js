@@ -17,6 +17,9 @@ class Geo {
 
 	constructor(conf = {}){
 		this.conf = conf;
+
+		// Timezone Alias
+		this.tz = this.timezone;
 	}
 
 	/*
@@ -43,6 +46,7 @@ class Geo {
 	*/
 
 	async reverse(params){
+		
 		let result = await request({
 			url: `${this.conf.endpoint}/geo/reverse`,
 			method: 'POST',
@@ -59,7 +63,8 @@ class Geo {
 
 	*/
 
-	async tz(params){
+	async timezone(params){
+
 		let result = await request({
 			url: `${this.conf.endpoint}/geo/timezone`,
 			method: 'POST',

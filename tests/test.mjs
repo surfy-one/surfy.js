@@ -64,3 +64,17 @@ options = {
 
 result = await surfy.geo.reverse(options);
 console.log('Geo° Reverse Geocoding:', result);
+
+/*
+
+Geo° Timezone
+
+*/
+
+options = {
+	lat: 51.505563,
+	lng: -0.023309
+};
+
+result = await surfy.geo.timezone(options);
+console.log('Geo° Timezone:', result);
