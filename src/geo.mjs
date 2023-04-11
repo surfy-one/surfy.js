@@ -52,6 +52,23 @@ class Geo {
 
 		return result;
 	}
+
+	/*
+
+	Timezone
+
+	*/
+
+	async tz(params){
+		let result = await request({
+			url: `${this.conf.endpoint}/geo/timezone`,
+			method: 'POST',
+			headers: this.conf.headers,
+			params: params
+		});
+
+		return result;
+	}
 };
 
 export default Geo;
