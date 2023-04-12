@@ -125,6 +125,7 @@ let options = {
 	lat: 51.505563,
 	lng: -0.023309
 };
+
 let result = await surfy.geo.reverse(options);
 console.log(result);
 
@@ -153,6 +154,35 @@ JSON {
 		offset: 60,
 		localTime: '4/12/2023, 11:13:55 AM GMT+01:00'
 	}
+}
+
+*/
+
+```
+
+## Geo.timezone()
+
+```js
+
+let options = {
+	lat: 51.505563,
+	lng: -0.023309
+};
+
+let result = await surfy.geo.tz(options); // Alias: surfy.geo.timezone(options)
+console.log(result);
+
+/*
+
+JSON {
+	state: true,
+	latitude: 51.505563,
+	longitude: -0.023309,
+	id: 'Europe/London',
+	name: 'British Summer Time',
+	gmt: 'GMT+01:00',
+	offset: 60,
+	localTime: '4/12/2023, 11:13:55AM GMT+01:00'
 }
 
 */
