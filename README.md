@@ -54,6 +54,7 @@ console.log(result);
 
 ## Words.translations.languages()
 
+
 ```js
 
 let result = await surfy.words.translate.languages();
@@ -66,6 +67,48 @@ console.log(result);
 	items: ['en-fr', 'en-it', 'en-ru', 'en-es',
     'en-uk', 'fr-en', 'fr-it', 'fr-ru',
     'fr-es', 'fr-uk', ...]
+}
+
+*/
+
+```
+
+# Geo
+
+```js
+
+let geo = surfy.geo;
+
+```
+
+## Geo.IP
+
+```js
+
+let result = await surfy.geo.ip('8.8.8.8');
+console.log(result);
+
+/*
+
+JSON {
+  ip: '8.8.8.8',
+  code: 'US',
+  country: 'United States of America',
+  region: 'California',
+  city: 'Mountain View',
+  latitude: 37.405992,
+  longitude: -122.078515,
+  zip: '94043',
+  timezone: {
+    id: 'America/Los_Angeles',
+    name: 'Pacific Daylight Time',
+    gmt: 'GMT-07:00',
+    offset: -420,
+    localTime: '4/12/2023, 3:13:55 AM GMT-07:00'
+  },
+  state: true,
+  numIP: 134744072,
+  time: 0.007
 }
 
 */
