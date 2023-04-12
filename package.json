@@ -1,6 +1,6 @@
 {
 	"name": "surfy",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"description": "Libraries for working with Surfy° Ecosystem in a JavaScript environment.",
 	"main": "./src/surfy.js",
 	"module": "./src/surfy.mjs",
