@@ -65,13 +65,15 @@ console.log(result);
 {
 	status: true,
 	items: ['en-fr', 'en-it', 'en-ru', 'en-es',
-    'en-uk', 'fr-en', 'fr-it', 'fr-ru',
-    'fr-es', 'fr-uk', ...]
+		'en-uk', 'fr-en', 'fr-it', 'fr-ru',
+		'fr-es', 'fr-uk', ...]
 }
 
 */
 
 ```
+
+<br/>
 
 # Geo
 
@@ -81,7 +83,7 @@ let geo = surfy.geo;
 
 ```
 
-## Geo.IP
+## Geo.ip()
 
 ```js
 
@@ -91,24 +93,66 @@ console.log(result);
 /*
 
 JSON {
-  ip: '8.8.8.8',
-  code: 'US',
-  country: 'United States of America',
-  region: 'California',
-  city: 'Mountain View',
-  latitude: 37.405992,
-  longitude: -122.078515,
-  zip: '94043',
-  timezone: {
-    id: 'America/Los_Angeles',
-    name: 'Pacific Daylight Time',
-    gmt: 'GMT-07:00',
-    offset: -420,
-    localTime: '4/12/2023, 3:13:55 AM GMT-07:00'
-  },
-  state: true,
-  numIP: 134744072,
-  time: 0.007
+	ip: '8.8.8.8',
+	code: 'US',
+	country: 'United States of America',
+	region: 'California',
+	city: 'Mountain View',
+	latitude: 37.405992,
+	longitude: -122.078515,
+	zip: '94043',
+	timezone: {
+		id: 'America/Los_Angeles',
+		name: 'Pacific Daylight Time',
+		gmt: 'GMT-07:00',
+		offset: -420,
+		localTime: '4/12/2023, 3:13:55 AM GMT-07:00'
+	},
+	state: true,
+	numIP: 134744072,
+	time: 0.007
+}
+
+*/
+
+```
+
+## Geo.reverse()
+
+```js
+
+let options = {
+	lat: 51.505563,
+	lng: -0.023309
+};
+let result = await surfy.geo.reverse(options);
+console.log(result);
+
+/*
+
+JSON {
+	state: true,
+	coords: { latitude: 51.505563, longitude: -0.023309 },
+	address: {
+		historic: 'Relief Portrait of Michael von Clemm',
+		road: 'Cabot Square',
+		quarter: 'Canary Wharf',
+		suburb: 'Isle of Dogs',
+		borough: 'London Borough of Tower Hamlets',
+		city: 'London',
+		stateDistrict: 'Greater London',
+		state: 'England',
+		postcode: 'E14 4QQ',
+		country: 'United Kingdom',
+		countryCode: 'gb'
+	},
+	timezone: {
+		id: 'Europe/London',
+		name: 'British Summer Time',
+		gmt: 'GMT+01:00',
+		offset: 60,
+		localTime: '4/12/2023, 11:13:55 AM GMT+01:00'
+	}
 }
 
 */
