@@ -1,7 +1,7 @@
 {
 	"name": "surfy",
 	"version": "1.0.9",
-	"description": "Libraries for working with Surfy° Ecosystem in a JavaScript environment.",
+	"description": "One Simple API. Libraries for working with Surfy° Ecosystem in a JavaScript environment.",
 	"main": "./src/surfy.js",
 	"module": "./src/surfy.mjs",
 	"exports": {
@@ -17,12 +17,12 @@
 	},
 	"author": {
 		"name": "Alexander Yermolenko",
-		"url": "https://surfy.one"
+		"url": "https://hello.surfy.one"
 	},
 	"keywords": [
-		"surfy"
+		"surfy", "one simple api"
 	],
-	"license": "MIT",
+	"license": "Public Domain",
 	"bugs": {
 		"url": "https://github.com/surfy-one/core.js/issues"
 	},

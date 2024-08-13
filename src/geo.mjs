@@ -11,15 +11,12 @@ class Geo {
 	/*
 
 	Surfy° Geo Constructor
-	@conf Email, API Key
+	@conf API Key
 
 	*/
 
 	constructor(conf = {}){
 		this.conf = conf;
-
-		// Timezone Alias
-		this.tz = this.timezone;
 	}
 
 	/*
@@ -28,12 +25,14 @@ class Geo {
 
 	*/
 
-	async ip(ip){
-		
+	async ip(ip) {
 		let result = await request({
-			url: `${this.conf.endpoint}/geo/ip/${ip}`,
+			url: `${this.conf.endpoint}/geo/ip`,
 			method: 'POST',
-			headers: this.conf.headers
+			headers: this.conf.headers,
+			params: {
+				ip: ip
+			}
 		});
 
 		return result;
@@ -45,7 +44,7 @@ class Geo {
 
 	*/
 
-	async reverse(params){
+	async reverse(params) {
 		
 		let result = await request({
 			url: `${this.conf.endpoint}/geo/reverse`,
@@ -63,10 +62,10 @@ class Geo {
 
 	*/
 
-	async timezone(params){
+	async tz(params) {
 
 		let result = await request({
-			url: `${this.conf.endpoint}/geo/timezone`,
+			url: `${this.conf.endpoint}/geo/tz`,
 			method: 'POST',
 			headers: this.conf.headers,
 			params: params

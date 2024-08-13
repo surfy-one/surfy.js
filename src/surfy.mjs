@@ -12,7 +12,7 @@ class Surfy {
 	/*
 
 	Surfy Constructor
-	@conf Email, API Key
+	@conf API Key
 
 	*/
 
@@ -25,8 +25,7 @@ class Surfy {
 		this.conf = conf;
 		
 		this.conf.headers = {
-			email: this.conf.email,
-			key: this.conf.key
+			'x-api-key': this.conf.key
 		};
 
 		this.words = new Words(conf);

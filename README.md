@@ -1,4 +1,4 @@
-# Surfy° Ecosystem for JavaScript
+# One Simple API for JavaScript
 
 This repository contains all libraries for working with Surfy° Ecosystem in a JavaScript environment.
 
@@ -15,8 +15,7 @@ npm install surfy
 import Surfy from 'surfy';
 
 const conf = {
-	email: "email@example.com",
-	key: "YOUR_FREE_API_KEY" // Get a key > https://surfy.one/developers
+	key: 'YOUR_FREE_API_KEY' // Get a key > https://api.surfy.one
 };
 
 const surfy = new Surfy(conf);
@@ -87,7 +86,7 @@ let geo = surfy.geo;
 
 ```js
 
-let result = await surfy.geo.ip('8.8.8.8');
+const result = await surfy.geo.ip('8.8.8.8');
 console.log(result);
 
 /*
@@ -108,9 +107,7 @@ JSON {
 		offset: -420,
 		localTime: '4/12/2023, 3:13:55 AM GMT-07:00'
 	},
-	state: true,
-	numIP: 134744072,
-	time: 0.007
+	status: true
 }
 
 */
@@ -121,18 +118,15 @@ JSON {
 
 ```js
 
-let options = {
-	lat: 51.505563,
-	lng: -0.023309
-};
+const options = [-0.023309, 51.505563]; // [longitude, latitude]
 
-let result = await surfy.geo.reverse(options);
+const result = await surfy.geo.reverse(options);
 console.log(result);
 
 /*
 
 JSON {
-	state: true,
+	status: true,
 	coords: { latitude: 51.505563, longitude: -0.023309 },
 	address: {
 		historic: 'Relief Portrait of Michael von Clemm',
@@ -160,22 +154,19 @@ JSON {
 
 ```
 
-## Geo.timezone()
+## Geo.tz()
 
 ```js
 
-let options = {
-	lat: 51.505563,
-	lng: -0.023309
-};
+const options = [-0.023309, 51.505563]; // [longitude, latitude]
 
-let result = await surfy.geo.tz(options); // Alias: surfy.geo.timezone(options)
+const result = await surfy.geo.tz(options); // Alias: surfy.geo.tz(options)
 console.log(result);
 
 /*
 
 JSON {
-	state: true,
+	status: true,
 	latitude: 51.505563,
 	longitude: -0.023309,
 	id: 'Europe/London',
@@ -192,24 +183,10 @@ JSON {
 <br />
 <br />
 
-## MIT License
+## License
 
-Alexander Yermolenko • [surfy.one](https://surfy.one)
+This project is dedicated to the public domain. You can do whatever you want with it, with no restrictions.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## Feel free to reach out!
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Alexander Yermolenko • [LinkedIn](https://www.linkedin.com/in/astroscout/) • [Surfy Foundation](https://hello.surfy.one)

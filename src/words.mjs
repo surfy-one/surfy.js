@@ -11,11 +11,11 @@ class Words {
 	/*
 
 	Surfy° Words Constructor
-	@conf Email, API Key
+	@conf API Key
 
 	*/
 
-	constructor(conf = {}){
+	constructor(conf = {}) {
 		this.conf = conf;
 
 		/*
@@ -36,7 +36,7 @@ class Words {
 		}
 	}
 
-	async translate(params){
+	async translate(params) {
 		
 		let result = await request({
 			url: `${this.conf.endpoint}/words/translate`,
