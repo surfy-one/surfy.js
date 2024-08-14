@@ -26,7 +26,7 @@ class Words {
 		
 		this.translate.languages = async () => {
 			
-			let result = await request({
+			const result = await request({
 				url: `${this.conf.endpoint}/words/translate/languages`,
 				method: 'POST',
 				headers: this.conf.headers
@@ -38,7 +38,7 @@ class Words {
 
 	async translate(params) {
 		
-		let result = await request({
+		const result = await request({
 			url: `${this.conf.endpoint}/words/translate`,
 			method: 'POST',
 			headers: this.conf.headers,

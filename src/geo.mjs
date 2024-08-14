@@ -15,7 +15,7 @@ class Geo {
 
 	*/
 
-	constructor(conf = {}){
+	constructor(conf = {}) {
 		this.conf = conf;
 	}
 
@@ -26,7 +26,7 @@ class Geo {
 	*/
 
 	async ip(ip) {
-		let result = await request({
+		const result = await request({
 			url: `${this.conf.endpoint}/geo/ip`,
 			method: 'POST',
 			headers: this.conf.headers,
@@ -46,7 +46,7 @@ class Geo {
 
 	async reverse(params) {
 		
-		let result = await request({
+		const result = await request({
 			url: `${this.conf.endpoint}/geo/reverse`,
 			method: 'POST',
 			headers: this.conf.headers,
@@ -64,7 +64,7 @@ class Geo {
 
 	async tz(params) {
 
-		let result = await request({
+		const result = await request({
 			url: `${this.conf.endpoint}/geo/tz`,
 			method: 'POST',
 			headers: this.conf.headers,

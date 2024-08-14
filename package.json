@@ -13,7 +13,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/surfy-one/core.js.git"
+		"url": "git+https://github.com/surfy-one/api.js.git"
 	},
 	"author": {
 		"name": "Alexander Yermolenko",
@@ -24,9 +24,9 @@
 	],
 	"license": "Public Domain",
 	"bugs": {
-		"url": "https://github.com/surfy-one/core.js/issues"
+		"url": "https://github.com/surfy-one/api.js/issues"
 	},
-	"homepage": "https://github.com/surfy-one/core.js#readme",
+	"homepage": "https://github.com/surfy-one/api.js#readme",
 	"dependencies": {
 		"@surfy/request": "^1.0.9"
 	}
