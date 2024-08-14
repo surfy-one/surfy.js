@@ -22,56 +22,7 @@ const surfy = new Surfy(conf);
 
 ```
 
-## Words.translations()
-
-```js
-
-const options = {
-	source: {
-		'lang': 'en',
-		'text': 'Hello Surfy!'
-	},
-	target: {
-		'lang': 'fr'
-	}
-};
-
-let result = await surfy.words.translate(options);
-console.log(result);
-
-/*
-
-{
-	status: true,
-	source: { lang: 'en', text: 'Hello Surfy!' },
-	target: { lang: 'fr', text: 'Bonjour Surfy!' }
-}
-
-*/
-
-```
-
-## Words.translations.languages()
-
-
-```js
-
-let result = await surfy.words.translate.languages();
-console.log(result);
-
-/*
-
-{
-	status: true,
-	items: ['en-fr', 'en-it', 'en-ru', 'en-es',
-		'en-uk', 'fr-en', 'fr-it', 'fr-ru',
-		'fr-es', 'fr-uk', ...]
-}
-
-*/
-
-```
-
+<br/>
 <br/>
 
 # Geo
@@ -179,6 +130,61 @@ JSON {
 */
 
 ```
+
+<br/>
+<br/>
+
+## Words.translations()
+
+```js
+
+const options = {
+	source: {
+		'lang': 'en',
+		'text': 'Hello Surfy!'
+	},
+	target: {
+		'lang': 'fr'
+	}
+};
+
+let result = await surfy.words.translate(options);
+console.log(result);
+
+/*
+
+{
+	status: true,
+	source: { lang: 'en', text: 'Hello Surfy!' },
+	target: { lang: 'fr', text: 'Bonjour Surfy!' }
+}
+
+*/
+
+```
+
+## Words.translations.languages()
+
+
+```js
+
+let result = await surfy.words.translate.languages();
+console.log(result);
+
+/*
+
+{
+	status: true,
+	items: ['en-fr', 'en-it', 'en-ru', 'en-es',
+		'en-uk', 'fr-en', 'fr-it', 'fr-ru',
+		'fr-es', 'fr-uk', ...]
+}
+
+*/
+
+```
+
+<br/>
 
 <br />
 <br />
