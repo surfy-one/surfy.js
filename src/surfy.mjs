@@ -18,7 +18,7 @@ class Surfy {
 
 	constructor(conf={}) {
 		
-		if(!conf.endpoint){
+		if (!conf.endpoint) {
 			conf.endpoint = 'https://api.surfy.one';
 		}
 
